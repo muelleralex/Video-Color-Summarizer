@@ -27,7 +27,7 @@ ap.add_argument("-v", "--video", required=True, help="Path to video", metavar="<
 ap.add_argument("-k", "--clusters", required=False, type=int, metavar="<clusters>", help="# of clusters", default=10)
 ap.add_argument("-f", "--frame", required=False, type=int, metavar="<frame>", help="Set granularity", default=60)
 ap.add_argument("-i", "--image", required=False, action="store_true", help="Display frames")
-ap.add_argument("-s", "--sample", required=False, type=restrict_float, metavar="<sample size>", help="Set fraction of sample size", default=(1/3));
+ap.add_argument("-s", "--sample", required=False, type=restrict_float, metavar="<sample size>", help="Set fraction of sample size", default=0.5));
 args = vars(ap.parse_args())
 
 ## SET VARIABLES ##
