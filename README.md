@@ -22,5 +22,9 @@ This would provide a 5-color summary for a frame taken every 30 second in the mo
 
 The Python script uses OpenCV to isolate the frames and uses scikit-learn to run the k-means algorithm. The color summary itself is output as a JSON file.
 
+## Example
+Below is a rendering of a color summary of this clip (https://www.youtube.com/watch?v=C-a3lflYOw8) with one frame being sampled for each second of the video and summarized to ten colors.
+![Moonlight Example](http://alexmu.com/MoonlightClip.PNG)
+
 ## Future
-I will be uploading a JavaScript file that can be used to render a display from the JSON file created by the python script. I will also be adding in a feature that will render the same display in matplotlib. Examples will eventually be uploaded to my personal website in the near future.
+I will be uploading a JavaScript file that can be used to render a display similar to the example from the JSON file created by the python script. I will also be adding in a feature that will render the same display in matplotlib. Examples will eventually be uploaded to my personal website in the near future.
