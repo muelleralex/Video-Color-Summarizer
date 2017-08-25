@@ -1,13 +1,7 @@
 """
 IDEAS:
--   instead of shuffling pixels for sampling, just take every nth pixel, so
-    instead of sampling 30% of the pixels you could simply take every 10th pixel which would realistically give a better summary of the frame and also a more
-    consistent result each time
--   to get every 10th pixel, just do array[0::10], not sure how I would do
-    something like 5% or something (I think every 10th pixel would be 10%)
 -   need to find a way to deal with missing frames and opencv errors
 -   need method for dealing with unfinished color summaries
--   need to store frame number => convert to time in film
 """
 
 
