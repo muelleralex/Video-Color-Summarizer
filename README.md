@@ -34,3 +34,5 @@ I will be uploading a JavaScript file that can be used to render a display simil
 
 ## Updates
 I have changed the method for sampling pixels. Previously, the program would randomly order the pixels and then designate a fraction of them as the sample. The new method samples by choosing every nth pixel. So for example if you choose a 10% sample, it will choose every 10th pixel. This ensures that the pixels are sampled throughout the frame, and because it is no longer necessary to take large samples, run time has been reduced as well.
+
+I also added in a feature where it records the exact frame number and time of the frames sampled.
