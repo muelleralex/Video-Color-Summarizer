@@ -15,7 +15,6 @@ import cv2,random,argparse,json,math,sys
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
-from sklearn.utils import shuffle
 
 def restrict_float(x):
     x = float(x)
@@ -147,7 +146,7 @@ while success:
         #     if not R and not G and not B:
         #         image_array_sample = np.delete(image_array_sample, i, 0)
 
-        all_pixels += image_array_sample.tolist()
+        all_pixel += image_array_sample.tolist()
         # run the k-means algorithm to find k colors on the sample pixels
         kmeans = KMeans(n_clusters=k, random_state=0).fit(image_array_sample)
         # generate color counts and clusters
