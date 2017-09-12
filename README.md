@@ -29,6 +29,8 @@ Below is a rendering of a color summary of this clip (https://www.youtube.com/wa
 The rendering below provides an example with more extreme color variation. The colors summary comes from the opening title sequence to <i>Napoleon Dynamite</i> (https://vimeo.com/5524216).
 ![Napoleon Dynamite Example](http://alexmu.com/NapoleonDynamite.PNG)
 
+For more examples, go to http://www.alexmu.com/vcs.
+
 ## Future
 I will be uploading a JavaScript file that can be used to render a display similar to the example from the JSON file created by the python script. I will also be adding in a feature that will render the same display in matplotlib. Examples will eventually be uploaded to my personal website in the near future.
 
