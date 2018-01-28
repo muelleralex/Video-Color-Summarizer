@@ -45,7 +45,7 @@ def generate_color_count(k, sample, totalPixels, original=[]):
     return colorCount
 
 def summarize_colors(k, granularity, sample_percent, show_image, fps,
-    video_file, total_frames):
+    video_file, total_frames, store_image, img_output_folder):
     count = 0
     success = True
     # number of frames summarized
@@ -75,6 +75,7 @@ def summarize_colors(k, granularity, sample_percent, show_image, fps,
             m, s = divmod(seconds, 60)
             h, m = divmod(m, 60)
             time = "%d:%02d:%02d" % (h,m,s)
+            file_time = "%d-%02d-%02d" % (h,m,s)
             progress(count,total_frames,"Summarizing colors")
             # colors are stored backwards for some reason
             image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -83,7 +84,14 @@ def summarize_colors(k, granularity, sample_percent, show_image, fps,
             # if true => display frame
             if show_image:
                 plt.imshow(image)
+                plt.xticks([])
+                plt.yticks([])
                 plt.show()
+            # if true => store image in img_output_folder
+            if store_image:
+                # trying opencv method
+                image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+                cv2.imwrite(img_output_folder + "/frame_" + file_time + ".png", image)
             # convert image to array of RGB values
             image = np.array(image, dtype=np.float64) / 255
             # set width and height
