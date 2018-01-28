@@ -61,6 +61,8 @@ if all_clusters:
     for i in range(1,11):
         vc.summarize_colors(i, granularity, sample_percent, show_image, fps,
             video_file, total_frames, store_image, img_output_folder)
+        # the program looks at the same frames each time, so you only need to store it once
+        store_image = False
 else:
     vc.summarize_colors(k, granularity, sample_percent, show_image, fps,
         video_file, total_frames, store_image, img_output_folder)
