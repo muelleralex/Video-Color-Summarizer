@@ -55,6 +55,11 @@ def summarize_colors(k, granularity, sample_percent, show_image, fps,
     data = [{'granularity' : granularity, 'clusters' : k, 'sampling' : sample_percent, 'fps' : fps}]
     all_pixels = []
 
+    # create output folder
+    output_folder = video_file.split('.')[0]
+    if not isdir(output_folder):
+        mkdir(output_folder)
+
     vidcap = cv2.VideoCapture(video_file)
     success,image = vidcap.read()
 
@@ -137,5 +142,5 @@ def summarize_colors(k, granularity, sample_percent, show_image, fps,
     colorFile = video_file.split('.')[0] + "_" + str(k)+ '.json'
     # convert data to JSON file
     print "Packaging into JSON file..."
-    with open(colorFile, 'w') as outfile:
+    with open(output_folder + "/" + colorFile, 'w') as outfile:
         json.dump(data, outfile)
